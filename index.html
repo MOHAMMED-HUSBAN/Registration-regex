@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <span id="usernameError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="error-message"></span>
+            <input type="checkbox" id="showPassword" for="showPassword"><span>Show password</span>
+            
+            <ul class="criteria-list">
+                <li id="length">At least 8 characters long</li>
+                <li id="uppercase">At least one uppercase letter</li>
+                <li id="digit">At least one digit</li>
+                <li id="special">At least one special character</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
+            <span id="birthdayError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            <span id="emailError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="07XXXXXXXX" required>
+            <span id="phoneError" class="error-message"></span>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
